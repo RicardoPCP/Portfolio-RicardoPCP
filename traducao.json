@@ -1,0 +1,83 @@
+{
+    "br":{
+        "ola": "Olá, mundo!",
+        "port-ver": "Portfólio v1<br>2026",
+        "desc-hero": "Desenvolvedor focado em criar interfaces modernas, responsívas e acessíveis",
+        "btn-cv-texto": "Prefere o mais tradicional?",
+        "btn-cv": "VISUALIZAR<br>CURRÍCULO",
+        "btn-contato-texto": "Disponível para<br>freelas e projetos",
+        "btn-contato": "ENTRE EM<br>CONTATO!",
+
+        "nav-home": "<br>Início",
+        "nav-sobre": "<br>Sobre",
+        "nav-tech": "<br>Tech",
+        "nav-projetos": "<br>Projetos",
+        "nav-contato": "<br>Contato",
+        "nav-lingua": "BR",
+
+        "sobre": "<span class='borda-bottom'>SOBRE:</span>",
+        "sobre-desc": "Oi, eu sou <span>Ricardo</span>, tenho 22 anos e sou estudante de Ciência da Computação e desenvolvedor front-end apaixonado por transformar ideias em experiências digitais modernas, funcionais e responsivas. Atualmente, estou colocando meus estudos em prática através do desenvolvimento de websites e projetos próprios, explorando desde design até o código. <span><br><br>Gosto de fazer o usuário nem perceber todo o trabalhão por trás das interfaces!</span>",
+        "sobre-item1":"<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='currentColor'><path d='M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm140-40-56-56 103-104-104-104 57-56 160 160-160 160Zm180 0v-80h240v80H480Z'/></svg> <span>DEVELOPER</span> por profissão",
+        "sobre-item2": "<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='currentColor'><path d='M160-240q-33 0-56.5-23.5T80-320v-320q0-33 23.5-56.5T160-720h640q33 0 56.5 23.5T880-640v320q0 33-23.5 56.5T800-240H160Zm0-80h640v-320H160v320Zm120-40h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80Zm342.5-17.5Q640-395 640-420t-17.5-42.5Q605-480 580-480t-42.5 17.5Q520-445 520-420t17.5 42.5Q555-360 580-360t42.5-17.5Zm120-120Q760-515 760-540t-17.5-42.5Q725-600 700-600t-42.5 17.5Q640-565 640-540t17.5 42.5Q675-480 700-480t42.5-17.5ZM160-320v-320 320Z'/></svg><span>GAMER</span> há 22 anos...",
+        "sobre-item3": "<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='currentColor'><path d='M640-80q-67 0-101.5-22.5T480-150q-19-20-36.5-35T399-200q-45 0-100-15.5t-103.5-51Q147-302 114-359T80-499q-2-167 82.5-274T399-880q71 0 120 20.5t84.5 51.5q35.5 31 60 68.5T710-667q12 20 24 36.5t26 30.5q60 60 90 105t30 136q0 120-74.5 199.5T640-80Zm0-80q57 0 108.5-56.5T800-359q0-66-19.5-97T704-544q-21-20-37.5-44.5T633-639q-41-65-87-113t-147-48q-129 0-185 92.5T160-500q1 67 29 110t66.5 67.5Q294-298 334-289t65 9q51 0 82 24.5t51 45.5q22 23 42.5 36.5T640-160ZM480-340q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41Zm-1-140Z'/></svg><span>COZINHEIRO</span> nos fins de semana :>",
+        "sobre-item4": "<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='currentColor'><path d='M312-240q-51 0-97.5-18T131-311q-48-45-69.5-106.5T40-545q0-78 38-126.5T189-720q14 0 26.5 2.5T241-710l239 89 239-89q13-5 25.5-7.5T771-720q73 0 111 48.5T920-545q0 66-21.5 127.5T829-311q-37 35-83.5 53T648-240q-66 0-112-30l-46-30h-20l-46 30q-46 30-112 30Zm0-80q37 0 69-17.5t59-42.5h80q27 25 59 42.5t69 17.5q36 0 69.5-12.5T777-371q34-34 48.5-80t14.5-94q0-41-17-68.5T769-640q-3 0-22 4L480-536 213-636q-5-2-10.5-3t-11.5-1q-37 0-54 27t-17 68q0 49 14.5 95t49.5 80q26 25 59 37.5t69 12.5Zm49-60q37 0 58-16.5t21-45.5q0-49-64.5-93.5T239-580q-37 0-58 16.5T160-518q0 49 64.5 93.5T361-380Zm-6-60q-38 0-82.5-25T220-516q5-2 11.5-3.5T245-521q38 0 82.5 25.5T380-444q-5 2-11.5 3t-13.5 1Zm244 61q72 0 136.5-45t64.5-94q0-29-20.5-46T721-581q-72 0-136.5 45T520-442q0 29 21 46t58 17Zm6-61q-7 0-13-1t-11-3q8-26 52.5-51t82.5-25q7 0 13 1t11 3q-8 26-52.5 51T605-440Zm-125-40Z'/></svg><span>COSPLAYER</span> nas horas vagas!",
+        "sobre-exp": "<span class='borda-bottom'>EXPERIÊNCIA:</span>",
+        "sobre-ul1": "<li class='trabalho'><span>Desenvolvedor Web - Freelancer</span> Jun/2026 - Atual</li><li class='afazer fim'>Construção de landing pages e sites responsivos</li><li class='trabalho'><span>Instituto Educar Aparecida - Trabalho Voluntário</span> Abr/2026 - Atual</li><li class='afazer'>Construção e manutenção de banco de dados SQL</li><li class='afazer fim'>Suporte ao desenvolvimento back-end utilizando JavaScript</li><li class='trabalho'><span>Dele Dela Calçados - Assistente de Gerência e Vendedor</span> Mai/2020 - Atual</li><li class='afazer'>Abertura e fechamento de loja e caixa</li><li class='afazer'>Atendimento ao cliente</li><li class='afazer'>Manutenção e organização de estoque</li><li class='afazer'>Cadastro de mercadorias</li><li class='afazer fim'>Contato com fornecedores</li></ul>",
+        "sobre-ul2": "<li class='trabalho'> <span>Ciências da Computação</span> | Abr/2022 - Atual (8º Semestre)</li><li class='afazer fim'>Centro Universitário Jorge Amado (UNIJORGE)</li><li class='trabalho'> <span>Oficina de Idéias, Aprender e Empreender</span> | Ago/2022 - Dez/202</li><li class='afazer fim'>UFBA (Ciências Contábeis)</li><li class='trabalho'> <span>Curso Web Front-end HTML, CSS, JS</span> | Abr/2026</li><li class='afazer fim'>Serliv Cursos</li><li class='trabalho'> <span>Curso de Javascript</span> | Mai/2026</li><li class='afazer fim'>Curso em Vídeo</li>",
+        "sobre-cursos": "<span class='borda-bottom2'>CURSOS E FORMAÇÕES:</span>",
+
+        "tecnologias-div": "<h2><span class='borda-bottom'>TECNOLOGIAS:</span></h2><p>Minha stack de desenvolvimento...</p></div>",
+        "estudando": "(Estudando...)",
+        "db": "Banco de dados",
+        "ferramentas": "Ferramentas",
+
+        "conversar": "Oi! Bora conversar!",
+        "contato-texto": "Estou construindo minha trajetória na área de tecnologia, se tiver uma ideia, oportunidade ou só quiser bater um papo...<br><br><span>ENTRE EM CONTATO!</span>",
+        "email": "E-mail copiado! Espero uma mensagem!",
+        "footer": "- - - Feito com <svg xmlns='http://www.w3.org/2000/svg' height='12px' viewBox='0 -960 960 960' width='12px' fill='currentColor'><path d='M160-120v-80h640v80H160Zm160-160q-66 0-113-47t-47-113v-400h640q33 0 56.5 23.5T880-760v120q0 33-23.5 56.5T800-560h-80v120q0 66-47 113t-113 47H320Zm0-80h240q33 0 56.5-23.5T640-440v-320H240v320q0 33 23.5 56.5T320-360Zm400-280h80v-120h-80v120ZM320-360h-80 400-320Z'/></svg> e ♥ - - -",
+        "musicalg": "Tocando: 'Playful Piano' by Dylann Taylor",
+
+        "projetosTxt": "<h2><span class=borda-bottom>PROJETOS:</span></h2><p>Clique no projeto para saber mais detalhes!</p>"
+    },
+        "en":{
+        "ola": "Hello, world!",
+        "port-ver": "Portfolio v1<br>2026",
+        "desc-hero": "Developer focused on creating modern, responsive, and accessible interfaces",
+        "btn-cv-texto": "Prefering the curriculum?",
+        "btn-cv": "VIEW MY<br>CURRICULUM",
+        "btn-contato-texto": "Open for freelance<br>and projects",
+        "btn-contato": "GET IN<br>TOUCH!",
+
+        "nav-home": "<br>Home",
+        "nav-sobre": "<br>About",
+        "nav-tech": "<br>Tech",
+        "nav-projetos": "<br>Projects",
+        "nav-contato": "<br>Contact",
+        "nav-lingua": "EN",
+
+        "sobre": "<span class='borda-bottom'>ABOUT ME:</span>",
+        "sobre-desc": "Hi, I’m <span>Ricardo</span>. I’m a 22-year-old Computer Science student and front-end developer passionate about turning ideas into modern, functional, and responsive digital experiences. Currently, I’m putting my studies into practice by building websites and personal projects, handling everything from design to code. <span><br><br>I love ensuring the user doesn't even notice all the hard work going on behind the scenes!</span>",
+        "sobre-item1":"<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='currentColor'><path d='M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm140-40-56-56 103-104-104-104 57-56 160 160-160 160Zm180 0v-80h240v80H480Z'/></svg> <span>DEVELOPER</span> being developed",
+        "sobre-item2": "<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='currentColor'><path d='M160-240q-33 0-56.5-23.5T80-320v-320q0-33 23.5-56.5T160-720h640q33 0 56.5 23.5T880-640v320q0 33-23.5 56.5T800-240H160Zm0-80h640v-320H160v320Zm120-40h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80Zm342.5-17.5Q640-395 640-420t-17.5-42.5Q605-480 580-480t-42.5 17.5Q520-445 520-420t17.5 42.5Q555-360 580-360t42.5-17.5Zm120-120Q760-515 760-540t-17.5-42.5Q725-600 700-600t-42.5 17.5Q640-565 640-540t17.5 42.5Q675-480 700-480t42.5-17.5ZM160-320v-320 320Z'/></svg><span>GAMER</span> for like 22 years...",
+        "sobre-item3": "<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='currentColor'><path d='M640-80q-67 0-101.5-22.5T480-150q-19-20-36.5-35T399-200q-45 0-100-15.5t-103.5-51Q147-302 114-359T80-499q-2-167 82.5-274T399-880q71 0 120 20.5t84.5 51.5q35.5 31 60 68.5T710-667q12 20 24 36.5t26 30.5q60 60 90 105t30 136q0 120-74.5 199.5T640-80Zm0-80q57 0 108.5-56.5T800-359q0-66-19.5-97T704-544q-21-20-37.5-44.5T633-639q-41-65-87-113t-147-48q-129 0-185 92.5T160-500q1 67 29 110t66.5 67.5Q294-298 334-289t65 9q51 0 82 24.5t51 45.5q22 23 42.5 36.5T640-160ZM480-340q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41Zm-1-140Z'/></svg><span>CHEF</span> on weekends :>",  
+        "sobre-item4": "<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='currentColor'><path d='M312-240q-51 0-97.5-18T131-311q-48-45-69.5-106.5T40-545q0-78 38-126.5T189-720q14 0 26.5 2.5T241-710l239 89 239-89q13-5 25.5-7.5T771-720q73 0 111 48.5T920-545q0 66-21.5 127.5T829-311q-37 35-83.5 53T648-240q-66 0-112-30l-46-30h-20l-46 30q-46 30-112 30Zm0-80q37 0 69-17.5t59-42.5h80q27 25 59 42.5t69 17.5q36 0 69.5-12.5T777-371q34-34 48.5-80t14.5-94q0-41-17-68.5T769-640q-3 0-22 4L480-536 213-636q-5-2-10.5-3t-11.5-1q-37 0-54 27t-17 68q0 49 14.5 95t49.5 80q26 25 59 37.5t69 12.5Zm49-60q37 0 58-16.5t21-45.5q0-49-64.5-93.5T239-580q-37 0-58 16.5T160-518q0 49 64.5 93.5T361-380Zm-6-60q-38 0-82.5-25T220-516q5-2 11.5-3.5T245-521q38 0 82.5 25.5T380-444q-5 2-11.5 3t-13.5 1Zm244 61q72 0 136.5-45t64.5-94q0-29-20.5-46T721-581q-72 0-136.5 45T520-442q0 29 21 46t58 17Zm6-61q-7 0-13-1t-11-3q8-26 52.5-51t82.5-25q7 0 13 1t11 3q-8 26-52.5 51T605-440Zm-125-40Z'/></svg><span>COSPLAYER</span> on my free time!",
+        "sobre-exp": "<span class='borda-bottom'>EXPERIENCE:</span>",
+        "sobre-ul1": "<li class='trabalho'><span>Freelance Web Developer</span> Jun/2026 - Present</li><li class='afazer fim'>Building landing pages and responsive websites</li><li class='trabalho'><span>Instituto Educar Aparecida - Volunteer Work</span> Apr/2026 - Present</li><li class='afazer'>Building and maintaining SQL databases</li><li class='afazer fim'>Supporting back-end development using JavaScript</li><li class='trabalho'><span>Dele Dela Calçados - Assistant Manager and Salesman</span> May/2020 - Present</li><li class='afazer'>Opening and closing the store and cash register</li><li class='afazer'>Customer service</li><li class='afazer'>Inventory maintenance and organization</li><li class='afazer'>Product registration</li><li class='afazer fim'>Liaising with suppliers</li>",
+        "sobre-ul2": "<li class='trabalho'> <span>Computer Science</span> | Apr 2022 – Present (8th Semester)</li><li class='afazer fim'>Centro Universitário Jorge Amado (UNIJORGE)</li><li class='trabalho'> <span>Ideas Workshop: Learning and Entrepreneurship</span> | Aug 2022 – Dec 2022</li><li class='afazer fim'>UFBA (Accounting)</li><li class='trabalho'> <span>Web Front-end Course (HTML, CSS, JS)</span> | Apr 2026</li><li class='afazer fim'>Serliv Cursos</li><li class='trabalho'> <span>JavaScript Course</span> | May 2026</li><li class='afazer fim'>Curso em Vídeo</li>",
+        "sobre-cursos": "<span class='borda-bottom'>EDUCATION:</span>",
+
+        "tecnologias-div": "<h2><span class='borda-bottom'>TECH:</span></h2><p>My development stack...</p></div>",
+        "estudando": "(Studying...)",
+        "db": "Database",
+        "ferramentas": "Design Tools",
+
+        "conversar": "Hi! Let's chat!<span class='mouseBlink'>|</span>",
+        "contato-texto": "I'm building my career on technology. If you have an idea, an opportunity, or just want to chat...<br><br><span>GET IN TOUCH!</span>",
+        "email": "E-mail copied! Waiting for a talk!",
+
+        "footer": "- - - Made with <svg xmlns='http://www.w3.org/2000/svg' height='12px' viewBox='0 -960 960 960' width='12px' fill='currentColor'><path d='M160-120v-80h640v80H160Zm160-160q-66 0-113-47t-47-113v-400h640q33 0 56.5 23.5T880-760v120q0 33-23.5 56.5T800-560h-80v120q0 66-47 113t-113 47H320Zm0-80h240q33 0 56.5-23.5T640-440v-320H240v320q0 33 23.5 56.5T320-360Zm400-280h80v-120h-80v120ZM320-360h-80 400-320Z'/></svg> and ♥ - - -",
+        "musicalg": "Playing: 'Playful Piano' by Dylann Taylor",
+
+        "projetosTxt": "<h2><span class=borda-bottom>PROJECTS:</span></h2><p>Click on the project to learn more details!</p>"
+    }
+}

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content = "Ricardo PCP">
+
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="favicon.ico" />
+    <script src="script.js" defer></script>
+
+    <title>RicardoPCP</title>
+    
+</head>
+<body>
+    <main>
+    <header>
+        <div class="botao-config">
+
+            <audio id="musica" src="./assets/bg-music.mp3" loop></audio>
+
+            <div class="tocandomusica"><p data-key="musicalg">Tocando: 'Playful Piano' by Dylann Taylor</p>
+            </div>
+
+            <ul class="config" onclick="configClick()" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') { configClick(); event.preventDefault(); }">
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3EBDD"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/></svg></li>
+                <span class="notificacao"></span>
+            </ul>
+
+            <div class="aba-config some">
+                <ul>
+                    <li class="cor hover" onclick="toggleDarkMode()" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') { toggleDarkMode(); event.preventDefault(); }"><svg class="sol" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#F3EBDD"><path d="M565-395q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35Zm-226.5 56.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg> <svg class="lua" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#181818"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg> </li> <li>|</li>
+                    <li class="btnMusic hover" onclick="toggleMusic()" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') { toggleMusic(); event.preventDefault(); }"><svg class="noMusic" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#181818"><path d="M792-56 56-792l56-56 736 736-56 56ZM560-514l-80-80v-246h240v160H560v166ZM400-120q-66 0-113-47t-47-113q0-66 47-113t113-47q23 0 42.5 5.5T480-418v-62l80 80v120q0 66-47 113t-113 47Z"/></svg> <svg class="music" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#181818"><path d="M287-167q-47-47-47-113t47-113q47-47 113-47 23 0 42.5 5.5T480-418v-422h240v160H560v400q0 66-47 113t-113 47q-66 0-113-47Z"/></svg></li> <li>|</li>
+                    <li class="lingua hover" onclick="toggleLanguage()" data-key="nav-lingua" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') { toggleLanguage(); event.preventDefault(); }"><p>BR</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <ul class="navbar-hid" onclick="navMobile()" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') { navMobile(); event.preventDefault(); }">
+                <li class="menu" ><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#F3EBDD"><path d="M340-540H200q-33 0-56.5-23.5T120-620v-140q0-33 23.5-56.5T200-840h140q33 0 56.5 23.5T420-760v140q0 33-23.5 56.5T340-540Zm-140-80h140v-140H200v140Zm140 500H200q-33 0-56.5-23.5T120-200v-140q0-33 23.5-56.5T200-420h140q33 0 56.5 23.5T420-340v140q0 33-23.5 56.5T340-120Zm-140-80h140v-140H200v140Zm560-340H620q-33 0-56.5-23.5T540-620v-140q0-33 23.5-56.5T620-840h140q33 0 56.5 23.5T840-760v140q0 33-23.5 56.5T760-540Zm-140-80h140v-140H620v140Zm140 500H620q-33 0-56.5-23.5T540-200v-140q0-33 23.5-56.5T620-420h140q33 0 56.5 23.5T840-340v140q0 33-23.5 56.5T760-120Zm-140-80h140v-140H620v140ZM340-620Zm0 280Zm280-280Zm0 280Z"/></svg></li>
+            </ul>
+            <ul class="navbarul-mobile">
+                <li class="hover"><a href="#home" data-page="home" onclick="irParaPagina('home')" ><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3EBDD"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg> <span data-key="nav-home"><br>Início</span></a></li>
+
+                <li class="hover"><a href="#" data-page="sobre" onclick="irParaPagina('sobre')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3EBDD"><path d="M367-527q-47-47-47-113t47-113q47-47 113-47t113 47q47 47 47 113t-47 113q-47 47-113 47t-113-47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm296.5-343.5Q560-607 560-640t-23.5-56.5Q513-720 480-720t-56.5 23.5Q400-673 400-640t23.5 56.5Q447-560 480-560t56.5-23.5ZM480-640Zm0 400Z"/></svg> <span data-key="nav-sobre"><br>Sobre</span></a></li>
+
+                <li class="hover"><a href="#" data-page="tech" onclick="irParaPagina('tech')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3EBDD"><path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg> <span data-key="nav-tech"><br>Tech</span></a></li>
+
+                <li class="hover"><a href="#" data-page="projetos" onclick="irParaPagina('projetos')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3EBDD"><path d="M480-400 40-640l440-240 440 240-440 240Zm0 160L63-467l84-46 333 182 333-182 84 46-417 227Zm0 160L63-307l84-46 333 182 333-182 84 46L480-80Zm0-411 273-149-273-149-273 149 273 149Zm0-149Z"/></svg><span data-key="nav-projetos"><br> Projetos</span></a></li>
+
+                <li class="hover"><a href="#" data-page="contato" onclick="irParaPagina('contato')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3EBDD"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg><span data-key="nav-contato"><br> Contato</span></a></li>
+
+                <li class="hover menu-fechar" onclick="navFechar()" tabindex="0" role="button" onkeydown="if(event.key === 'Enter' || event.key === ' ') { navFechar(); event.preventDefault(); }"> <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#F3EBDD"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="telaDeCarregamento">
+        <div class="barra"><img class="guacinim-load" src="./assets/logo.png" alt="Cabeça de guaxinim feliz em low poly"></div>
+        <p class="text-carregando">CARREGANDO.<span class="reticencias">..</p>
+        <p class="obs">Não vai demorar!</p>
+    </div>
+
+    <div class="conteudo">
+
+    <hero id="home" class="pagina ativa">
+        <div class="hero-texto">
+
+        <h3><svg width="90" height="30" viewBox="0 0 91 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_92_171)">
+<line x1="72" y1="0.5" x2="14" y2="0.499999" stroke="currentColor"/>
+</g>
+<g filter="url(#filter1_d_92_171)">
+<line x1="50" y1="12.5" x2="-1.17985e-08" y2="12.5" stroke="currentColor"/>
+</g>
+<g filter="url(#filter2_d_92_171)">
+<line x1="28" y1="22.5" x2="82" y2="22.5" stroke="currentColor"/>
+</g>
+<defs>
+<filter id="filter0_d_92_171" x="14" y="0" width="67" height="9" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="5" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_92_171"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_92_171" result="shape"/>
+</filter>
+<filter id="filter1_d_92_171" x="0" y="12" width="59" height="9" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="5" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_92_171"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_92_171" result="shape"/>
+</filter>
+<filter id="filter2_d_92_171" x="28" y="22" width="63" height="9.00001" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="5" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_92_171"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_92_171" result="shape"/>
+</filter>
+</defs>
+</svg>
+<span data-key="ola">Olá, mundo!</span> <span class="mao"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" style="width:1em;height:1em;margin: 0.2px 0 0 1px;"><path d="m430-500 283-283q12-12 28-12t28 12q12 12 12 28t-12 28L487-444l-57-56Zm99 99 254-255q12-12 28.5-12t28.5 12q12 12 12 28.5T840-599L586-345l-57-56ZM211-211q-91-91-91-219t91-219l120-120 59 59q7 7 12 14.5t10 15.5l148-149q12-12 28.5-12t28.5 12q12 12 12 28.5T617-772L444-599l-85 84 19 19q46 46 44 110t-49 111l-57-56q23-23 25.5-54.5T321-440l-47-46q-12-12-12-28.5t12-28.5l57-56q12-12 12-28.5T331-656l-64 64q-68 68-68 162.5T267-267q68 68 163 68t163-68l239-240q12-12 28.5-12t28.5 12q12 12 12 28.5T889-450L649-211q-91 91-219 91t-219-91Zm219-219ZM680-39v-81q66 0 113-47t47-113h81q0 100-70.5 170.5T680-39ZM39-680q0-100 70.5-170.5T280-921v81q-66 0-113 47t-47 113H39Z"/></svg></span><svg class="rotate"width="90" height="30" viewBox="0 0 91 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_92_171)">
+<line x1="72" y1="0.5" x2="14" y2="0.499999" stroke="currentColor"/>
+</g>
+<g filter="url(#filter1_d_92_171)">
+<line x1="50" y1="12.5" x2="-1.17985e-08" y2="12.5" stroke="currentColor"/>
+</g>
+<g filter="url(#filter2_d_92_171)">
+<line x1="28" y1="22.5" x2="82" y2="22.5" stroke="currentColor"/>
+</g>
+<defs>
+<filter id="filter0_d_92_171" x="14" y="0" width="67" height="9" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="5" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_92_171"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_92_171" result="shape"/>
+</filter>
+<filter id="filter1_d_92_171" x="0" y="12" width="59" height="9" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="5" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_92_171"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_92_171" result="shape"/>
+</filter>
+<filter id="filter2_d_92_171" x="28" y="22" width="63" height="9.00001" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="5" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_92_171"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_92_171" result="shape"/>
+</filter>
+</defs>
+</svg>
+</h3>
+        
+        <h1><span>FRONT-END
+        <div class="versao-port"><p data-key="port-ver">Portfólio v1<br>2026</p></div></span>
+        <br>DEVELOPER</h1>
+        <h3 class="nome">RicardoPCP</h3>
+        </div>
+
+         <div class="hero-infos">
+            <div class="hero-video">
+            <video class="video-hero" autoplay muted loop preload="auto">
+                <source src="./assets/animacoes/hero.webm" type="video/webm" alt="Animação de guaxinim low poly trabalhando">
+                <img src="./assets/animacoes/hero.apng" alt="Animação de guaxinim low poly trabalhando" loading="lazy"> </video>
+            </div>
+
+            <div class="perfis">
+            <ul>
+                <li class="hover"><a href="https://www.linkedin.com/in/ricardo-pessoa-215923372" target="_blank" rel="noopener noreferrer"><img src="./assets/linkedinlogo.png" alt="perfil LinkedIN"></a></li>
+                <li class="hover"><a href="https://github.com/RicardoPCP" target="_blank" rel="noopener noreferrer"><img src="./assets/githublogo.png" alt="perfil GitHub"></a></li>
+            </ul>
+            </div>
+
+            <div class="desc-hero">
+                <span><p data-key="desc-hero">Desenvolvedor focado em criar interfaces modernas, responsívas e acessíveis<br>
+                </span></p>
+            </div>
+
+            <div class="btns-grid">
+            <div class="btn-cv">
+                <p data-key="btn-cv-texto">Prefere o mais tradicional?</p>
+                <a class="btn" href="./assets/Currículo.pdf" target="_blank"><span data-key="btn-cv">VISUALIZAR<br>CURRÍCULO</span> <svg  class="CV" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3EBDD"><path d="M280-280h280v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Zm-80 480q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg></a>
+            </div>
+
+            <div class="btn-contato">
+                <p><span data-key="btn-contato-texto">Disponível para<br>freelas e projetos</span> <svg class="check" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#53764F"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></p>
+                <a class="btn" href="#" data-page="contato" onclick="irParaPagina('contato')"><span data-key="btn-contato">ENTRE EM<br>CONTATO!</span> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3EBDD"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg></a>
+            </div>
+            </div>
+
+            </div>
+    </hero>
+
+    <hero id="sobre" class="pagina">
+        <div class="div-sobre">
+            <div class="sobre-texto">
+                <h2 data-key="sobre"><span class="borda-bottom">SOBRE:</span></h2>
+                    <p data-key="sobre-desc">Oi, eu sou <span>Ricardo</span>, tenho 22 anos e sou estudante de Ciência da Computação e desenvolvedor front-end apaixonado por transformar ideias em experiências digitais modernas, funcionais e responsivas. Atualmente, estou colocando meus estudos em prática através do desenvolvimento de websites e projetos próprios, explorando desde design até o código. 
+
+                    <span><br><br>Gosto de fazer o usuário nem perceber todo o trabalhão por trás das interfaces!</span>
+                    </p>
+                    </div>
+
+                    <div class="carrossel">
+                        <button class="seta antes">❮</button>
+                    <ul>
+                        <li><img src="./assets/guaciDEV.png">
+                        <br><p data-key="sobre-item1" class="hobby"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm140-40-56-56 103-104-104-104 57-56 160 160-160 160Zm180 0v-80h240v80H480Z"/></svg> <span> DEVELOPER</span> por profissão</p></li>
+
+                        <li><img src="./assets/guaciGAMER.png">
+                        <br><p data-key="sobre-item2" class="hobby"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M160-240q-33 0-56.5-23.5T80-320v-320q0-33 23.5-56.5T160-720h640q33 0 56.5 23.5T880-640v320q0 33-23.5 56.5T800-240H160Zm0-80h640v-320H160v320Zm120-40h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80Zm342.5-17.5Q640-395 640-420t-17.5-42.5Q605-480 580-480t-42.5 17.5Q520-445 520-420t17.5 42.5Q555-360 580-360t42.5-17.5Zm120-120Q760-515 760-540t-17.5-42.5Q725-600 700-600t-42.5 17.5Q640-565 640-540t17.5 42.5Q675-480 700-480t42.5-17.5ZM160-320v-320 320Z"/></svg>
+                        <span> GAMER</span> há 22 anos...</p></li>
+
+                        <li><img src="./assets/guaciCOZI.png">
+                        <br><p data-key="sobre-item3" class="hobby"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M640-80q-67 0-101.5-22.5T480-150q-19-20-36.5-35T399-200q-45 0-100-15.5t-103.5-51Q147-302 114-359T80-499q-2-167 82.5-274T399-880q71 0 120 20.5t84.5 51.5q35.5 31 60 68.5T710-667q12 20 24 36.5t26 30.5q60 60 90 105t30 136q0 120-74.5 199.5T640-80Zm0-80q57 0 108.5-56.5T800-359q0-66-19.5-97T704-544q-21-20-37.5-44.5T633-639q-41-65-87-113t-147-48q-129 0-185 92.5T160-500q1 67 29 110t66.5 67.5Q294-298 334-289t65 9q51 0 82 24.5t51 45.5q22 23 42.5 36.5T640-160ZM480-340q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41Zm-1-140Z"/></svg>
+                        <span> COZINHEIRO</span> nos fins de semana :></p></li>
+
+                        <li><img src="./assets/guaciCOSPLAY.png">
+                        <br><p data-key="sobre-item4" class="hobby"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M312-240q-51 0-97.5-18T131-311q-48-45-69.5-106.5T40-545q0-78 38-126.5T189-720q14 0 26.5 2.5T241-710l239 89 239-89q13-5 25.5-7.5T771-720q73 0 111 48.5T920-545q0 66-21.5 127.5T829-311q-37 35-83.5 53T648-240q-66 0-112-30l-46-30h-20l-46 30q-46 30-112 30Zm0-80q37 0 69-17.5t59-42.5h80q27 25 59 42.5t69 17.5q36 0 69.5-12.5T777-371q34-34 48.5-80t14.5-94q0-41-17-68.5T769-640q-3 0-22 4L480-536 213-636q-5-2-10.5-3t-11.5-1q-37 0-54 27t-17 68q0 49 14.5 95t49.5 80q26 25 59 37.5t69 12.5Zm49-60q37 0 58-16.5t21-45.5q0-49-64.5-93.5T239-580q-37 0-58 16.5T160-518q0 49 64.5 93.5T361-380Zm-6-60q-38 0-82.5-25T220-516q5-2 11.5-3.5T245-521q38 0 82.5 25.5T380-444q-5 2-11.5 3t-13.5 1Zm244 61q72 0 136.5-45t64.5-94q0-29-20.5-46T721-581q-72 0-136.5 45T520-442q0 29 21 46t58 17Zm6-61q-7 0-13-1t-11-3q8-26 52.5-51t82.5-25q7 0 13 1t11 3q-8 26-52.5 51T605-440Zm-125-40Z"/></svg>
+                        <span> COSPLAYER</span> nas horas vagas!</p></li>
+                    </ul>
+                    <button class="seta depois">❯</button>
+                </div>
+
+            <div class="div-experiencia">
+                <div class="div-experiencia">
+                    <h2 data-key="sobre-exp"><span class="borda-bottom" >EXPERIÊNCIA:</span></h2>
+                    <div class="experiencia-desc">
+                        <ul data-key="sobre-ul1">
+                            <li class="trabalho"><span>Desenvolvedor Web - Freelancer</span> Jun/2026 - Atual</li>
+                            <li class="afazer fim">Construção de landing pages e sites responsivos</li>
+
+                            <li class="trabalho"><span>Instituto Educar Aparecida - Trabalho Voluntário</span> Abr/2026 - Atual</li>
+                            <li class="afazer">Construção e manutenção de banco de dados SQL</li>
+                            <li class="afazer fim">Suporte ao desenvolvimento back-end utilizando JavaScript</li>
+
+                            <li class="trabalho"><span>Dele Dela Calçados - Assistente de Gerência e Vendedor</span> Mai/2020 - Atual</li>
+                            <li class="afazer">Abertura e fechamento de loja e caixa</li>
+                            <li class="afazer">Atendimento ao cliente</li>
+                            <li class="afazer">Manutenção e organização de estoque</li>
+                            <li class="afazer">Cadastro de mercadorias</li>
+                            <li class="afazer fim">Contato com fornecedores</li>
+                            </ul>
+                    </div>
+                        <div class="experiencia-video">
+                        <video class="video-experiencia" autoplay muted loop preload="auto">
+                         <source src="./assets/animacoes/gravata.webm" type="video/webm" alt="Animação de guaxinim low poly arrumando gravata">
+                         <img src="./assets/animacoes/gravata.apng" alt="Animação de guaxinim low poly arrumando gravata" loading="lazy"> </video>
+                         </div>
+                </div>
+            </div>
+
+            <div class="div-cursos">
+                <div class="div-cursos">
+                    <h2 data-key="sobre-cursos"><span class="borda-bottom2">CURSOS E FORMAÇÕES:</span></h2>
+                    <div class="curso-desc">
+                        <ul data-key="sobre-ul2">
+                            <li class="trabalho"> <span>Ciências da Computação</span> | Abr/2022 - Atual (8º Semestre)</li>
+                            <li class="afazer fim">Centro Universitário Jorge Amado (UNIJORGE)</li>
+
+                            <li class="trabalho"> <span>Oficina de Idéias, Aprender e Empreender</span> | Ago/2022 - Dez/202</li>
+                            <li class="afazer fim">UFBA (Ciências Contábeis)</li>
+
+                            <li class="trabalho"> <span>Curso Web Front-end HTML, CSS, JS</span> | Abr/2026</li>
+                            <li class="afazer fim">Serliv Cursos</li>
+
+                            <li class="trabalho"> <span>Curso de Javascript</span> | Mai/2026</li>
+                            <li class="afazer fim">Curso em Vídeo</li>
+                        </ul>
+                        <div class="curso-video">
+                        <video class="video-curso" autoplay muted loop preload="auto">
+                         <source src="./assets/animacoes/papel.webm" type="video/webm" alt="Animação de guaxinim low poly escrevendo">
+                         <img src="./assets/animacoes/papel.apng" alt="Animação de guaxinim low poly escrevendo" loading="lazy"> </video>
+                         </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </hero>
+
+    <hero id="tech" class="pagina">
+        <div class="div-tech">
+            <div class="tech-texto" data-key="tecnologias-div">
+                <h2><span class="borda-bottom">TECNOLOGIAS:</span></h2>
+                <p>Minha stack de desenvolvimento...</p>
+                </div>
+                <div class="lista-tech">
+                    <div class="caixa-tech">
+                        <p class="titulo-caixa-tech">Front-end</p>
+                        <p><img class="programacao-logo" src="./assets/html.png"> HTML, 
+                        <img class="programacao-logo" src="./assets/css.png"> CSS, 
+                        <img class="programacao-logo" src="./assets/javascript.png"> JavaScript, 
+                        <img class="programacao-logo" src="./assets/react.webp"> React 
+                        <span data-key="estudando">(Estudando...)</span></p>
+                    </div>
+
+                    <div class="caixa-tech">
+                        <p class="titulo-caixa-tech">Back-end</p>
+                        <p><img class="programacao-logo" src="./assets/node.png">  Node.js</p>
+                    </div>
+
+                    <div class="caixa-tech">
+                        <p class="titulo-caixa-tech" data-key="db">Banco de Dados</p>
+                        <p><img class="programacao-logo" src="./assets/mysql.png">  MySQL, 
+                        <img class="programacao-logo" src="./assets/postgre.webp"> PostgreSQL</p>
+                    </div>
+
+                    <div class="caixa-tech">
+                        <p class="titulo-caixa-tech" data-key="ferramentas">Ferramentas</p>
+                        <p>                        <img class="programacao-logo" src="./assets/git.png"> Git, 
+                        <img class="programacao-logo" src="./assets/githubminilogo.webp"> GitHub, 
+                        <img class="programacao-logo" src="./assets/figma.png"> Figma, 
+                        <img class="programacao-logo" src="./assets/blender.webp"> Blender</p>
+                    </div>
+                </div>
+
+                <div class="ascii">
+                    <img src="./assets/ascii-art.png" alt="Imagem em ASCII de guaxinim">
+                </div>
+
+        </div>
+    </hero>
+
+    <hero id="projetos" class="pagina">
+        <div class="div-projetos">
+            <div class="projeto-texto" data-key="projetosTxt" >
+                <h2><span class=borda-bottom>PROJETOS:</span></h2>
+                <p>Clique no projeto para saber mais detalhes!</p>
+            </div>
+                <div class="grid-projetos">
+                    <div class="espacoprojeto1">
+                    <div class="projeto">
+                        <p class="titulo-projeto"><span class="tagP">Site Comercial:</span> <span class="nomeP">Academia Fitness Performance</span></p>
+
+                        <button type="button" command="show-modal" commandfor="dialogProjeto1">
+                        <img class="thumbP" src="./assets/projetos/FP1.webp" alt="Thumbnail Academia Fitness Performance">
+                        </button>
+
+                        <p class="desc-projeto">Website para promover a academia FP</p>
+                    </div>
+                    <dialog id="dialogProjeto1">
+                        <button class="fecharDialog" type="button" command="close" commandfor="dialogProjeto1"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+
+                        <h2 class="dialogNomeSite"><span>Site Comercial:</span><br>Academia Fitness Performance</h2>
+
+                        <div class="carrossel projetos">
+                        <button class="seta antes">❮</button>
+                    <ul>
+                        <li><img src="./assets/projetos/FP1.webp" loading="lazy" alt="Imagem de site 1"></li>
+                        <li><img src="./assets/projetos/FP2.webp" loading="lazy" alt="Imagem de site 2"></li>
+                        <li><img src="./assets/projetos/FP3.webp" loading="lazy" alt="Imagem de site 3"></li>
+                    </ul>
+                    <button class="seta depois">❯</button>
+                        </div>
+
+                        <div class="btns-grid">
+                            <div class="btn-cv">
+                            <a class="btn" href="https://github.com/RicardoPCP/Fitness-Performance" target="_blank"><span>ACESSAR<br>REPOSITÓRIO</span> <img class="btn-github" src="./assets/githublogo.png"></a>
+                        </div>
+
+                        <div class="btn-contato">
+                            <a class="btn" href="https://fitnessperformance.com.br/" target="_blank"><span>ACESSAR<br>PROJETO</span> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3EBDD"><path d="M40-120v-80h880v80H40Zm120-120q-33 0-56.5-23.5T80-320v-440q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v440q0 33-23.5 56.5T800-240H160Zm0-80h640v-440H160v440Zm0 0v-440 440Z"/></svg></a>
+                        </div>
+                        </div>
+
+                        <p>O projeto consiste em um website desenvolvido para a academia Fitness Performance, com o objetivo de apresentar seus serviços e canais de contato de forma moderna, responsiva e acessível. O site também oferece funcionalidades interativas para melhorar a experiência dos alunos, como recomendação de músicas para a playlist da academia.</p>
+                        <ul>
+                            <li><span>TECNOLOGIAS:<br></span><p>HTML, CSS, JavaScript e Git</p></li>
+                            <li><span>FUNCIONALIDADES:</span>
+                                <ul>
+                                    <li>Website de fácil acesso e completamente responsivo;</li>
+                                    <li>Formulário para sugestão de músicas;</li>
+                                    <li>Exibição de planos e serviços;</li>
+                                    <li>Integração com WhatsApp para contato rápido;</li>
+                                </ul></li>
+                        </ul>
+
+                    </dialog>
+                    </div>
+
+                    <div class="espacoprojeto2">
+                    <div class="projeto">
+                        <p class="titulo-projeto"><span class="tagP">Sistema:</span> <span class="nomeP">CodoLog</span></p>
+
+                        <button type="button" command="show-modal" commandfor="dialogProjeto2">
+                        <img class="thumbP" src="./assets/projetos/CL2.webp" alt="Thumbnail sistema CodoLog">
+                        </button>
+
+                        <p class="desc-projeto">Sistema de ocorrências para condomínios</p>
+                    </div>
+                    <dialog id="dialogProjeto2">
+                        <button class="fecharDialog" type="button" command="close" commandfor="dialogProjeto2"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+
+                        <h2 class="dialogNomeSite"><span>Sistema:</span><br>Codolog</h2>
+
+                        <div class="carrossel projetos">
+                        <button class="seta antes">❮</button>
+                    <ul>
+                        <li><img src="./assets/projetos/CL2.webp" loading="lazy" alt="Imagem de site 1"></li>
+                        <li><img src="./assets/projetos/CL1.webp" loading="lazy" alt="Imagem de site 2"></li>
+                        <li><img src="./assets/projetos/CL3.jpg" loading="lazy" alt="Imagem de site 3"></li>
+                        <li><img src="./assets/projetos/CL4.webp" loading="lazy" alt="Imagem de site 4"></li>
+                    </ul>
+                    <button class="seta depois">❯</button>
+                        </div>
+
+                        <div>
+                            <div class="unicbtnProjeto">
+                            <a class="btn" href="https://github.com/xxxRafaelxxx/TeamCoders" target="_blank"><span>ACESSAR<br>REPOSITÓRIO</span> <img class="btn-github" src="./assets/githublogo.png"></a>
+                        </div>
+                        </div>
+
+                        <p>Este sistema fornece um ambiente de comunicação entre moradores, síndico e equipe administrativa através de ocorrências. Desta forma, fica muito mais fácil de receber, acompanhar e resolver as necessidades dos moradores.<br>(Projeto em equipe)</p>
+                        <ul>
+                            <li><span>TECNOLOGIAS:<br></span><p>HTML, CSS, JavaScript, React, Node.Js e PostgreSQL</p></li>
+                            <li><span>FUNCIONALIDADES:</span>
+                                <ul>
+                                    <li>Cadastro de usuários e condomínios;</li>
+                                    <li>Registro e acompanhamento de ocorrências;</li>
+                                    <li>Definição de cargos no condomínio</li>
+                                </ul></li>
+                        </ul>
+
+                    </dialog>
+                    </div>
+
+                    <div class="espacoprojeto3">
+                    <div class="projeto">
+                        <p class="titulo-projeto"><span class="tagP">Jogo:</span> <span class="nomeP">Madrugando...</span></p>
+
+                        <button type="button" command="show-modal" commandfor="dialogProjeto3">
+                        <img class="thumbP" src="./assets/projetos/MGthumb.webp" alt="Thumbnail jogo Madrugando">
+                        </button>
+
+                        <p class="desc-projeto">Jogo de sobrevivência com minigames</p>
+                    </div>
+                    <dialog id="dialogProjeto3">
+                        <button class="fecharDialog" type="button" command="close" commandfor="dialogProjeto3"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+
+                        <h2 class="dialogNomeSite"><span>Jogo:</span><br>Madrugando...</h2>
+
+                        <div class="carrossel projetos">
+                        <button class="seta antes">❮</button>
+                    <ul>
+                        <li><img src="./assets/projetos/MG1.webp" loading="lazy" alt="Imagem de site 1"></li>
+                        <li><img src="./assets/projetos/MG2.webp" loading="lazy" alt="Imagem de site 2"></li>
+                        <li><img src="./assets/projetos/MG3.webp" loading="lazy" alt="Imagem de site 3"></li>
+                    </ul>
+                    <button class="seta depois">❯</button>
+                        </div>
+
+                        <div>
+                            <div class="unicbtnProjeto">
+                            <a class="btn" href="https://drive.google.com/file/d/12iOmOXT9M4QRdd-fR528hQhF9H0pX29w/view?usp=sharing" target="_blank"><span>BAIXAR<br>APLICAÇÃO</span> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg></a>
+                        </div>
+                        </div>
+
+                        <p>Era pra você estar dormindo, mas nada melhor do que passar a noite jogando... uma pena que fantasmas resolveram te assombrar logo hoje!<br>Antes de dormir, vença todos os minigames do seu console e evite que os fantasmas te alcancem<br>(Inspirado em FNAF | Projeto acadêmico)
+                        </p>
+                        <ul>
+                            <li><span>TECNOLOGIAS:<br></span><p>Clickteam Fusion e Clip Studio Paint</p></li>
+                            <li><span>FUNCIONALIDADES:</span>
+                                <ul>
+                                    <li>4 minigames para jogar;</li>
+                                    <li>Loop de gameplay com estilo survival horror;</li>
+                                </ul></li>
+                        </ul>
+
+                    </dialog>
+                    </div>
+
+                    <div class="espacoprojeto4">
+                    <div class="projeto">
+                        <p class="titulo-projeto"><span class="tagP">Jogo:</span> <span class="nomeP">Madrugando 2: Masmorra Macabra</span></p>
+
+                        <button type="button" command="show-modal" commandfor="dialogProjeto4">
+                        <img class="thumbP" src="./assets/projetos/MG2-thumb.webp" alt="Thumbnail Madrugando 2">
+                        </button>
+
+                        <p class="desc-projeto">Jogo educativo focado em digitação</p>
+                    </div>
+                    <dialog id="dialogProjeto4">
+                        <button class="fecharDialog" type="button" command="close" commandfor="dialogProjeto4"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+
+                        <h2 class="dialogNomeSite"><span>Jogo:</span><br>Madrugando 2:<br> Masmorra Macabra</h2>
+
+                        <div class="carrossel projetos">
+                        <button class="seta antes">❮</button>
+                    <ul>
+                        <li><img src="./assets/projetos/MG2-1.webp" loading="lazy" alt="Imagem de site 1"></li>
+                        <li><img src="./assets/projetos/MG2-2.webp" loading="lazy" alt="Imagem de site 2"></li>
+                        <li><img src="./assets/projetos/MG3-3.webp" loading="lazy" alt="Imagem de site 3"></li>
+                    </ul>
+                    <button class="seta depois">❯</button>
+                        </div>
+
+                        <div>
+                            <div class="unicbtnProjeto">
+                            <a class="btn" href="https://drive.google.com/file/d/1gldTF6yEr_5Y59zH9TLvrXhoNhhOsmso/view?usp=sharing" target="_blank"><span>BAIXAR<br>APLICAÇÃO</span> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg></a>
+                        </div>
+                        </div>
+
+                        <p>Um typing game em que o jogador enfrenta inimigos utilizando a digitação como principal forma de combate, cada inimigo carrega uma palavra que deve ser digitada corretamente para ser derrotado. Além dos inimigos comuns, surgem inimigos especiais que desafiam o jogador com perguntas de conhecimentos gerais e para derrotá-los o jogador deve digitar rapidamente a resposta correta antes que o tempo se esgote. <br>(Projeto acadêmico)
+                        </p>
+                        <ul>
+                            <li><span>TECNOLOGIAS:<br></span><p>Clickteam Fusion, Blender e Clip Studio Paint</p></li>
+                            <li><span>FUNCIONALIDADES:</span>
+                                <ul>
+                                    <li>Combate com base em digitação;</li>
+                                    <li>Perguntas de vários assuntos;</li>
+                                </ul></li>
+                        </ul>
+
+                    </dialog>
+                    </div>
+
+                </div>
+
+            </div>
+    </hero>
+
+    <hero id="contato" class="pagina">
+        <div class="div-contato">
+            <h2 class="digitando" data-key="conversar">Oi! Bora conversar!<span class="mouseBlink">|</span></h2>
+                <div class="experiencia-video">
+                    <video class="video-experiencia" autoplay muted loop preload="auto">
+                    <source src="./assets/animacoes/gravata.webm" type="video/webm" alt="Animação de guaxinim low poly acenando com uma carta">
+                    <img src="./assets/animacoes/gravata.apng" alt="Animação de guaxinim low poly acenando com uma carta"> </video>
+                </div>
+
+            <div class="contato-texto">
+                <p data-key="contato-texto">Estou construindo minha trajetória na área de tecnologia, se tiver uma ideia, oportunidade ou só quiser bater um papo...<br><br>
+                <span>ENTRE EM CONTATO!</span></p>
+            </div>
+            <div class="perfis-contato">
+                <ul>
+                <li class="hover"><a href="https://www.linkedin.com/in/ricardo-pessoa-215923372" target="_blank" rel="noopener noreferrer"><img src="./assets/linkedinlogo.png" alt="perfil LinkedIN"></a></li>
+
+                <li class="hover"><a href="https://github.com/RicardoPCP" target="_blank" rel="noopener noreferrer"><img src="./assets/githublogo.png" alt="perfil GitHub"></a></li>
+
+                <li class="hover">
+                    <button type="button" id="btn-copiar-email" popovertarget="copiar-email"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg></button></li>
+                </ul>
+                <div id="copiar-email" popover="manual">
+                    <p data-key="email">E-mail copiado! Espero uma mensagem!</p>
+                </div>
+            </div>
+    </hero>
+
+    </div>
+    </main>
+    <footer>
+    <p data-key="footer">- - - Feito com <svg xmlns="http://www.w3.org/2000/svg" height="12px" viewBox="0 -960 960 960" width="12px" fill="currentColor"><path d="M160-120v-80h640v80H160Zm160-160q-66 0-113-47t-47-113v-400h640q33 0 56.5 23.5T880-760v120q0 33-23.5 56.5T800-560h-80v120q0 66-47 113t-113 47H320Zm0-80h240q33 0 56.5-23.5T640-440v-320H240v320q0 33 23.5 56.5T320-360Zm400-280h80v-120h-80v120ZM320-360h-80 400-320Z"/></svg> e ♥ - - -</p>
+    </footer>
+
+</body>
+</html>

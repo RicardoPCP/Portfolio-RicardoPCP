@@ -1,0 +1,211 @@
+.hero-texto{
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+
+    svg{
+        margin-top: 0.25rem;
+        width: 4em;
+        height: auto;
+        vertical-align: middle;
+
+        &.rotate{
+            transform: scaleX(-1);
+        }
+    }
+}
+
+#home.pagina{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100dvh; 
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s;
+    overflow: hidden;
+
+    &.ativa{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+
+h3 span.mao {
+    color: var(--cor-texto);
+    display: inline-block;
+    animation: oiMundo 5s ease-in-out infinite;
+    transform-origin: bottom left;
+}
+
+h1 span{ 
+    position: relative;
+    padding-bottom: 6px;
+
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 90%;
+        height: 3px;
+        background-color: var(--cor-destaque);
+        border-radius: 99px;
+        transform: translateX(-50%);
+    }
+}
+
+.titulo{
+    position: relative;
+    display: inline-block;
+}
+
+.versao-port{
+    position: absolute;
+    right: -5%;
+    top: 75%;
+
+    p{
+        font-size: clamp(0.5rem, 1.75vw, 0.5rem);
+        opacity: 0.9;
+        text-align: right;
+        color: var(--cor-texto);
+        letter-spacing: 0.1rem;
+    }
+}
+
+.hero-video{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.video-hero{
+        padding: 0 1rem;
+        width: 90%;
+        height: auto;
+        aspect-ratio: 1/1;
+        max-width: 800px;
+        margin-top: -2rem;
+        filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.4));
+    }
+
+.perfis{
+    display: flex;
+    position: absolute;
+    padding: 1rem;
+    right: 2%;
+    top: 30%;
+
+    img{
+        height: auto;
+        width: clamp(35px, 1.77rem + 1.85vw, 55px);
+        filter: drop-shadow(5px 4px 4px rgba(0, 0, 0, 0.233));
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        list-style: none;
+        flex-wrap: wrap;
+    }
+}
+
+.desc-hero{
+    text-align: center;
+    justify-content: center;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    
+    span{
+    position: relative;
+    padding-bottom: 6px;
+
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: -0.25rem;
+        left: 50%;
+        width: 90%;
+        height: 3px;
+        background-color: var(--cor-destaque);
+        border-radius: 99px;
+        transform: translateX(-50%);
+    }
+    }
+}
+
+.btns-grid{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    justify-content: center;
+    padding: 0 1rem 3rem;
+    gap: 1rem;
+
+    p{
+        font-size: clamp(0.75rem, 2vw, 1rem);
+        line-height: 1.1;
+        padding: 0.25rem;
+        margin: 0;
+        position: relative;
+        display: flex;
+        height: 1.75rem;
+        justify-content: center;
+        width: 100%;
+
+        svg{ 
+            width: 40px;
+            height: auto;
+            flex-shrink: 0;
+            position: static;
+            align-self: center;
+            left: auto;
+            top: auto;
+        }
+    }
+
+    .btn-cv{
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        align-self: start;
+        grid-row: 1;
+    }
+
+    .btn-contato{
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        align-self: start;
+        grid-row: 1;
+
+        p{
+            align-items: flex-end;
+            padding-bottom: 0.5rem;
+            margin-left: 1rem;
+        }
+    }
+}
+
+    .btns-grid p span{
+    text-align: center;
+}
