@@ -157,9 +157,8 @@
 .aba-config{
     z-index: 2;
     position: fixed;
-    position-anchor: --btn-config;
-    position-area: bottom right;
-    right: 2rem;
+    top: 6%;
+    right: 2em;
     padding: 1rem;
     background-color: var(--cor-destaque);
     border: 3px solid var(--cor-fundo);
@@ -184,6 +183,16 @@
         cursor: pointer;
         font-weight: 600;
         color: var(--cor-fundo);
+    }
+}
+
+ @supports (position-anchor: --a){ 
+    .aba-config{
+        position: fixed;
+        position-anchor: --btn-config;
+        position-area: bottom right;
+        top: 0;
+        right: 2em;
     }
 }
 

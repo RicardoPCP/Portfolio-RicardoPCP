@@ -26,6 +26,16 @@ window.addEventListener("load", function() {
     }, { once: true });
 });
 
+//IMG
+function isSafari() {
+  const ua = navigator.userAgent;
+  return /^((?!chrome|android).)*safari/i.test(ua);
+}
+
+if (isSafari()) {
+  document.getElementById('heroVideo').style.display = 'none';
+  document.getElementById('heroImg').style.display = 'block';
+}
 
 //NAVBAR
 function navMobile(){

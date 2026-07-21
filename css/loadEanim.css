@@ -48,6 +48,41 @@
     font-weight: 300;
 }
 
+/* 404 */
+.er404{
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+
+    p:not(.btn){
+        text-align: center;
+        padding: 0 1rem;
+        span{
+            color: var(--cor-destaque);
+            font-weight: 500;
+        }
+    }
+    .botao404{
+        display: flex;
+        padding: 1rem;
+        a{
+            text-decoration: none;
+        }
+    }
+    .btn.pag404{
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    img{
+        width: 400px;
+        height: auto;
+    }
+}
+
 @keyframes digitando {
   0% { width:0;}
   100% { width:0.8rem;}

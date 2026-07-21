@@ -2,7 +2,7 @@
     "br":{
         "ola": "Olá, mundo!",
         "port-ver": "Portfólio v1<br>2026",
-        "desc-hero": "Desenvolvedor focado em criar interfaces modernas, responsívas e acessíveis",
+        "desc-hero": "Desenvolvedor focado em criar interfaces modernas, responsivas e acessíveis",
         "btn-cv-texto": "Prefere o mais tradicional?",
         "btn-cv": "VISUALIZAR<br>CURRÍCULO",
         "btn-contato-texto": "Disponível para<br>freelas e projetos",
@@ -16,7 +16,7 @@
         "nav-lingua": "BR",
 
         "sobre": "<span class='borda-bottom'>SOBRE:</span>",
-        "sobre-desc": "Oi, eu sou <span>Ricardo</span>, tenho 22 anos e sou estudante de Ciência da Computação e desenvolvedor front-end apaixonado por transformar ideias em experiências digitais modernas, funcionais e responsivas. Atualmente, estou colocando meus estudos em prática através do desenvolvimento de websites e projetos próprios, explorando desde design até o código. <span><br><br>Gosto de fazer o usuário nem perceber todo o trabalhão por trás das interfaces!</span>",
+        "sobre-desc": "Oi, meu nome é <span>Ricardo</span>, tenho 22 anos e sou estudante de Ciência da Computação e desenvolvedor front-end apaixonado por transformar ideias em experiências digitais modernas, funcionais e responsivas. Atualmente, estou colocando meus estudos em prática através do desenvolvimento de websites e projetos próprios, explorando desde design até o código. <span><br><br>Gosto de fazer o usuário nem perceber todo o trabalhão por trás das interfaces!</span>",
         "sobre-item1":"<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='currentColor'><path d='M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm140-40-56-56 103-104-104-104 57-56 160 160-160 160Zm180 0v-80h240v80H480Z'/></svg> <span>DEVELOPER</span> por profissão",
         "sobre-item2": "<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='currentColor'><path d='M160-240q-33 0-56.5-23.5T80-320v-320q0-33 23.5-56.5T160-720h640q33 0 56.5 23.5T880-640v320q0 33-23.5 56.5T800-240H160Zm0-80h640v-320H160v320Zm120-40h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80Zm342.5-17.5Q640-395 640-420t-17.5-42.5Q605-480 580-480t-42.5 17.5Q520-445 520-420t17.5 42.5Q555-360 580-360t42.5-17.5Zm120-120Q760-515 760-540t-17.5-42.5Q725-600 700-600t-42.5 17.5Q640-565 640-540t17.5 42.5Q675-480 700-480t42.5-17.5ZM160-320v-320 320Z'/></svg><span>GAMER</span> há 22 anos...",
         "sobre-item3": "<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='currentColor'><path d='M640-80q-67 0-101.5-22.5T480-150q-19-20-36.5-35T399-200q-45 0-100-15.5t-103.5-51Q147-302 114-359T80-499q-2-167 82.5-274T399-880q71 0 120 20.5t84.5 51.5q35.5 31 60 68.5T710-667q12 20 24 36.5t26 30.5q60 60 90 105t30 136q0 120-74.5 199.5T640-80Zm0-80q57 0 108.5-56.5T800-359q0-66-19.5-97T704-544q-21-20-37.5-44.5T633-639q-41-65-87-113t-147-48q-129 0-185 92.5T160-500q1 67 29 110t66.5 67.5Q294-298 334-289t65 9q51 0 82 24.5t51 45.5q22 23 42.5 36.5T640-160ZM480-340q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41Zm-1-140Z'/></svg><span>COZINHEIRO</span> nos fins de semana :>",
@@ -44,7 +44,7 @@
         "port-ver": "Portfolio v1<br>2026",
         "desc-hero": "Developer focused on creating modern, responsive, and accessible interfaces",
         "btn-cv-texto": "Prefering the curriculum?",
-        "btn-cv": "VIEW MY<br>CURRICULUM",
+        "btn-cv": "VIEW MY<br>RESUME",
         "btn-contato-texto": "Open for freelance<br>and projects",
         "btn-contato": "GET IN<br>TOUCH!",
 
