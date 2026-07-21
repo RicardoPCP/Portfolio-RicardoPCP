@@ -133,7 +133,7 @@ img{
   &.depois { right: 20px; }
 }
 
-.video-experiencia, .video-curso{
+.video-experiencia, .video-curso, .video-contato{
         position: relative;
         justify-content: center;
         align-items: center;

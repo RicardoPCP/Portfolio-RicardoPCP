@@ -6,6 +6,9 @@ console.log(`Se encontrar algo suspeito, me manda uma mensagem:
 
 linkedin.com/in/ricardo-pessoa-215923372`)
 
+
+
+
 //CARREGAMENTO
 window.addEventListener("load", function() {
     const telaDeCarregamento = document.getElementById("telaDeCarregamento");
@@ -26,6 +29,9 @@ window.addEventListener("load", function() {
     }, { once: true });
 });
 
+
+
+
 //IMG
 function isSafari() {
   const ua = navigator.userAgent;
@@ -36,10 +42,16 @@ if (isSafari()) {
   document.querySelectorAll('.webM').forEach((video) => {
     const img = video.nextElementSibling;
 
-    video.style.display = 'none';
-    if (img) img.style.display = 'block';
+    if (img && img.dataset.src) {
+      img.src = img.dataset.src;
+      video.style.display = 'none';
+      img.style.display = 'block';
+    }
   });
 }
+
+
+
 
 //NAVBAR
 function navMobile(){
@@ -67,6 +79,8 @@ function irParaPagina(page){
 }
 
 
+
+
 //resize
 function ajustarAlturaConteudo(){
     const paginaAtiva = document.querySelector('.pagina.ativa');
@@ -80,6 +94,9 @@ function ajustarAlturaConteudo(){
 window.addEventListener('DOMContentLoaded', ajustarAlturaConteudo);
 window.addEventListener('resize', ajustarAlturaConteudo);
 
+
+
+
 //CONFIG
 function configClick(){
 const config = document.querySelector('.aba-config');
@@ -87,6 +104,8 @@ config.classList.toggle('aberta');
 config.classList.toggle('some');
 document.querySelector('.notificacao').classList.add('clicada');
 }
+
+
 
 
 //DARK MODE
@@ -107,6 +126,9 @@ if (savedTheme) {
 } else if (prefereEscuro) {
   document.documentElement.setAttribute('data-theme', 'dark');
 }
+
+
+
 
 //MUSICA
   const musica = document.getElementById('musica');
@@ -134,6 +156,9 @@ function showMusicPopup(){
     popupMusica.classList.remove('popup');
   }, 2500);
 }
+
+
+
 
 //LINGUA
 let traducoes = {};
@@ -167,6 +192,8 @@ function toggleLanguage(){
 }
 
 
+
+
 //CARROSSEL
 document.querySelectorAll('.carrossel').forEach(carrossel => {
   const track = carrossel.querySelector('ul');
@@ -187,6 +214,8 @@ document.querySelectorAll('.carrossel').forEach(carrossel => {
   carrossel.querySelector('.depois').addEventListener('click', () => { irPara(index + 1); resetAuto(); });
   carrossel.querySelector('.antes').addEventListener('click', () => { irPara(index - 1); resetAuto(); });
 });
+
+
 
 
 //COPIAR EMAIL
