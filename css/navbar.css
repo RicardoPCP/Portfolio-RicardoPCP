@@ -176,8 +176,9 @@
     ul{
         gap: 0.5rem;
         list-style: none;
-        flex-direction: row;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
     li{
         cursor: pointer;
@@ -262,4 +263,47 @@
     &.popup {
         top: 0px;
     }
+}
+
+/* bug */
+
+#dialogBug{
+    h2{
+        padding: 2rem;
+        text-align: center;
+    }
+    textarea.texto{
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(201, 201, 201);
+        margin: 0 auto;
+        width: 80%;
+        height: auto;
+        padding: 0.25rem;
+        display: block;
+        resize: none;
+        overflow: hidden;
+        field-sizing: content;
+    }
+    input.btn{
+        border: none;
+    }
+}
+
+.confirmacao-form{
+    opacity: 0.7;
+}
+span.aguarde, span.erro, span.sucesso{
+    font-weight: 800;
+    font-size: 1.5rem;
+    opacity: 1;
+}
+span.aguarde{
+    color: var(--cor-atencao);
+}
+span.erro{
+    color: rgb(146, 26, 26);
+}
+span.sucesso{
+    color: var(--cor-destaque);
 }

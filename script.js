@@ -1,10 +1,10 @@
 console.log(`Oi, amigo curioso! Procurando alguma coisa por aqui?
 
-Cuidado por onde procura, o guaxinim fez uma bagunça nesse código! Ele me contou que %cescondeu alguma coisa muito bem.`,
-'font-size:14px; font-weight:bold; color:#53764F;');
-console.log(`Se encontrar algo suspeito, me manda uma mensagem:
+Cuidado por onde procura, o guaxinim fez uma bagunça nesse código!
 
-linkedin.com/in/ricardo-pessoa-215923372`)
+Se encontrar algo suspeito, me manda uma mensagem:
+
+linkedin.com/in/ricardo-pessoa-215923372`);
 
 
 
@@ -245,4 +245,49 @@ document.addEventListener('DOMContentLoaded', () => {
             popover.hidePopover();
         }, 1500);
     });
+});
+
+
+
+//FORM BUG
+document.getElementById('formBug').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const ultimoEnvio = localStorage.getItem('ultimoEnvioBug');
+  const agora = new Date().getTime();
+  const cooldownDias = 1 * 24 * 60 * 60 * 1000;
+  const botao = document.querySelector('.btn');
+  const textConfirmacao = document.querySelector('.confirmacao-form p');
+  const textarea = document.querySelector('.texto');
+
+  if (ultimoEnvio && agora - ultimoEnvio < cooldownDias) {
+    const diasRestantes = Math.ceil((cooldownDias - (agora - ultimoEnvio)) / (24 * 60 * 60 * 1000));
+    textConfirmacao.innerHTML = `<span class="aguarde"> ! </span> Você já enviou uma sugestão. Tente novamente em ${diasRestantes} dia(s).`;
+    return;
+  }
+
+  botao.disabled = true;
+  botao.value = 'Enviando...';
+
+  const dados = {
+    bug: textarea.value
+  };
+
+  fetch('https://script.google.com/macros/s/AKfycbzG9AhOQ-EWNT9ARwtKSONqGVtnqnA-efqDPZP7jbcI-v9m8Mo3TZWTYwGqGbLaYIph/exec', {
+    method: 'POST',
+    mode: 'no-cors',
+    body: JSON.stringify(dados)
+  })
+  .then(() => {
+    localStorage.setItem('ultimoEnvioBug', agora);
+    textConfirmacao.innerHTML = '<span class="sucesso"> ✓ </span> Enviado com sucesso!';
+    botao.disabled = false;
+    botao.value = 'ENVIAR';
+    textarea.value = '';
+  })
+  .catch(() => {
+    textConfirmacao.innerHTML = '<span class="erro"> X </span> Erro ao enviar.';
+    botao.disabled = false;
+    botao.value = 'ENVIAR';
+  });
 });
