@@ -33,8 +33,12 @@ function isSafari() {
 }
 
 if (isSafari()) {
-  document.getElementById('heroVideo').style.display = 'none';
-  document.getElementById('heroImg').style.display = 'block';
+  document.querySelectorAll('.webM').forEach((video) => {
+    const img = video.nextElementSibling;
+
+    video.style.display = 'none';
+    if (img) img.style.display = 'block';
+  });
 }
 
 //NAVBAR
