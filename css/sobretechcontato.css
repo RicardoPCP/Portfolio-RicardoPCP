@@ -311,8 +311,10 @@ img{
     margin-bottom: 5rem;
 }
 
+
 .projeto{
     color: var(--cor-fundo);
+    height: 100%;
     padding: 0.5rem;
     box-sizing: border-box;
     width: fit-content;
@@ -352,6 +354,8 @@ img{
     box-sizing: border-box;
     border-radius: 20px;
     padding: 0.75rem;
+    object-fit: cover;
+    height: 220px;
 }
 
     .desc-projeto{

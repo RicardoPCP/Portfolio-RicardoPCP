@@ -272,11 +272,11 @@
         padding: 2rem;
         text-align: center;
     }
-    textarea.texto{
+    textarea.texto, input:not(.btn){
         border-radius: 5px;
         border: none;
         background-color: rgb(201, 201, 201);
-        margin: 0 auto;
+        margin: 1.5rem auto;
         width: 80%;
         height: auto;
         padding: 0.25rem;
@@ -284,10 +284,26 @@
         resize: none;
         overflow: hidden;
         field-sizing: content;
+
     }
     input.btn{
         border: none;
     }
+    .Formcampo{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    label{
+        position: absolute;
+        font-size: 0.9rem;
+        left: 10%;
+        color: var(--cor-texto);
+    }
+    .h-captcha {
+    position: relative;
+    z-index: 999999;
+}
 }
 
 .confirmacao-form{

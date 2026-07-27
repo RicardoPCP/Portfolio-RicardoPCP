@@ -250,44 +250,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //FORM BUG
-document.getElementById('formBug').addEventListener('submit', function(e) {
-  e.preventDefault();
+const form = document.getElementById('form');
+const submitBtn = form.querySelector('input[type="submit"]');
 
-  const ultimoEnvio = localStorage.getItem('ultimoEnvioBug');
-  const agora = new Date().getTime();
-  const cooldownDias = 1 * 24 * 60 * 60 * 1000;
-  const botao = document.querySelector('.btn');
-  const textConfirmacao = document.querySelector('.confirmacao-form p');
-  const textarea = document.querySelector('.texto');
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-  if (ultimoEnvio && agora - ultimoEnvio < cooldownDias) {
-    const diasRestantes = Math.ceil((cooldownDias - (agora - ultimoEnvio)) / (24 * 60 * 60 * 1000));
-    textConfirmacao.innerHTML = `<span class="aguarde"> ! </span> Você já enviou uma sugestão. Tente novamente em ${diasRestantes} dia(s).`;
-    return;
-  }
+    const formData = new FormData(form);
+    formData.append("access_key", "67942e12-d0b4-491f-a5cf-ddd87a45e4ef");
 
-  botao.disabled = true;
-  botao.value = 'Enviando...';
+    const originalText = submitBtn.value;
 
-  const dados = {
-    bug: textarea.value
-  };
+    submitBtn.value = "Enviando...";
+    submitBtn.disabled = true;
 
-  fetch('https://script.google.com/macros/s/AKfycbzG9AhOQ-EWNT9ARwtKSONqGVtnqnA-efqDPZP7jbcI-v9m8Mo3TZWTYwGqGbLaYIph/exec', {
-    method: 'POST',
-    mode: 'no-cors',
-    body: JSON.stringify(dados)
-  })
-  .then(() => {
-    localStorage.setItem('ultimoEnvioBug', agora);
-    textConfirmacao.innerHTML = '<span class="sucesso"> ✓ </span> Enviado com sucesso!';
-    botao.disabled = false;
-    botao.value = 'ENVIAR';
-    textarea.value = '';
-  })
-  .catch(() => {
-    textConfirmacao.innerHTML = '<span class="erro"> X </span> Erro ao enviar.';
-    botao.disabled = false;
-    botao.value = 'ENVIAR';
-  });
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert("Aê! Sua mensagem foi enviada");
+            form.reset();
+        } else {
+            alert("Error: " + data.message);
+        }
+
+    } catch (error) {
+        alert("Algo deu errado, tente de novo.");
+    } finally {
+        submitBtn.value = originalText;
+        submitBtn.disabled = false;
+    }
 });

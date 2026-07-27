@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content = "Ricardo PCP">
+    <meta name="author" content = "RicardoPCP">
+
+
+    <meta property="og:title" content="Portfolio RicardoPCP | Front-End Developer" />
+    <meta property="og:description" content="Veja meu portfólio! Certeza que vai gostar ^^" />
+    <meta property="og:image" content="https://github.com/RicardoPCP/Portfolio-RicardoPCP/blob/main/assets/logo.png" />
+    <meta property="og:url" content="https://ricardopcp.github.io/Portfolio-RicardoPCP/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name ="description" content = "Portfólio de projetos pessoais e profissionais de RicardoPCP">
+
 
     <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="favicon.ico" />
     <script src="script.js" defer></script>
@@ -45,12 +57,27 @@
                 </ul>
             </div>
             <dialog id="dialogBug">
-                <form id="formBug">
+                <form id="formBug" action="https://api.web3forms.com/submit" method="POST">
                         <button class="fecharDialog" type="button" command="close" commandfor="dialogBug"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
                 <h2 data-key="h2Bug">Encontrou um bug?</h2>
                 <p data-key="pBug">Conte o que aconteceu! Seu feedback ajuda a melhorar este portfólio.</p>
 
-                <textarea class="texto" type="text" minlength="7" maxlength="150" autocomplete="off" required></textarea><br>
+                <input type="hidden" name="access_key" value="67942e12-d0b4-491f-a5cf-ddd87a45e4ef">
+
+                <div class="Formcampo">
+                <label>Nome:</label>
+                <input type="text" name="name" required>
+                </div>
+
+                <div class="Formcampo">
+                <label>E-mail:</label>
+                <input type="email" name="email" required>
+                </div>
+
+                <div class="Formcampo">
+                <label>Digite o problema:</label>
+                <textarea name="message" required class="texto" type="text" minlength="7" maxlength="300" autocomplete="off" required></textarea><br>
+                </div>
 
                 <div class="unicbtnProjeto" data-key="btnBug">
                     <input type="submit" class="btn" value="ENVIAR" ></input>
@@ -555,8 +582,8 @@
             <h2 class="digitando" data-key="conversar">Oi! Bora conversar!<span class="mouseBlink">|</span></h2>
                 <div class="experiencia-video">
                     <video class="video-contato webM" autoplay muted loop preload="auto">
-                    <source src="./assets/animacoes/gravata.webm" type="video/webm" alt="Animação de guaxinim low poly acenando com uma carta"> </video>
-                    <img class="hero-video" data-src="./assets/animacoes/gravata.apng" alt="Animação de guaxinim low poly acenando com uma carta" loading="lazy" style="display:none;">
+                    <source src="./assets/animacoes/contato.webm" type="video/webm" alt="Animação de guaxinim low poly acenando com uma carta"> </video>
+                    <img class="hero-video" data-src="./assets/animacoes/contato.apng" alt="Animação de guaxinim low poly acenando com uma carta" loading="lazy" style="display:none;">
                 </div>
 
             <div class="contato-texto">
