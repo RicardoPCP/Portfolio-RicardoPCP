@@ -153,6 +153,11 @@ img{
             right: 15%;
         }
 
+        .video-contato{
+            width: 80%;
+            margin: 0 auto;
+        }
+
 .div-experiencia, .div-cursos{
     ul{
         display: flex;
@@ -263,13 +268,13 @@ img{
     }
 
     li img{
-        width: 50px;
+        width: clamp(50px, 6vw, 120px);
         height: auto;
     }
 
     svg{
         color: #587D56;
-        width: 50px;
+        width: clamp(50px, 6vw, 120px);
         height: auto;
     }
 }

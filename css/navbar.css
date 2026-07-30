@@ -32,8 +32,8 @@
 
      svg{
     display: block;
-    width: 30px;
-    height: 30px;
+    height: auto;
+    width: clamp(30px, 5vw, 40px);
     transition: transform 0.3s ease;
     transform-origin: center;
 }
